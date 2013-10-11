@@ -1,14 +1,6 @@
 <div data-role="view" id="pictures-view" data-id="pictures-view"
-     data-layout="main-layout" data-title="Pictures">
+     data-layout="main-layout" data-title="Pictures"
+    data-show="app.pictures.init">
 
-    <div>Hello</div>
-    <div data-role="scrollview"
-         data-source="test"
-        data-template="scrollview-batch-template">
-    </div>
-    <script id="scrollview-batch-template" type="text/x-kendo-template">
-        <div>
-            <p>#: name #</p>
-        </div>
-    </script>
+    <ul id="pictures-listview" data-role="listview" data-bind="source: pictures" data-template="picture-template"></ul>
 </div>

@@ -11,15 +11,29 @@
         <script src="cordova.js"></script>
         <script src="kendo/js/jquery.min.js"></script>
         <script src="kendo/js/kendo.all.min.js"></script>
-
+        <script src="scripts/libs/jso.js"></script>
+        <script src="scripts/libs/rsvp.min.js"></script>
+        <script src="scripts/app/http-request.js"></script>
+        <script src="scripts/app/pictures.js"></script>
+        <script src="scripts/app/post.js"></script>
         <script src="scripts/app.js"></script>
 
     </head>
     <body>
         <div data-role="view" id="home-view" data-id="home-view" data-layout="main-layout" data-title="Home">
-            <button data-role="button" id="capture-btn">Capture moment</button>
+            <div id="capture-wrapper">
+                <h2>Capture moment</h2>
+                <a data-role="button" id="capture-btn" data-icon="camera"></a>
+            </div>
+            <!--<button data-role="button" id="location-btn">Locate</button>
+                    
+            <select id="places-list" data-role="dropdownlist"
+            data-source="places" data-text-field="name">
+            </select>
+            
+            <button data-role="button" id="share-btn">Share</button>-->
         </div>
-
+            
         <div data-role="layout" id="main-layout" data-id="main-layout">
             <header data-role="header">
                 <div data-role="navbar">
@@ -29,15 +43,19 @@
             <footer data-role="footer">
                 <div data-role="tabstrip">
                     <a href="#home-view" data-icon="home">Home</a>
-                    <a href="views/pictures-view.html#pictures-view" data-icon="info">Pictures</a>
+                    <a href="views/pictures-view.html#pictures-view" data-icon="mostviewed">Pictures</a>
                 </div>
             </footer>
         </div>
 
-        <script id="scrollview-batch-template" type="text/x-kendo-template">
+        <script id="picture-template" type="text/x-kendo-template">
             <div>
-                <p>#: name #</p>
+                <img src="#: fullPath #" class="picture" />
             </div>
+        </script>
+
+        <script id="place-template" type="text/x-kendo-template">
+            <span><span>#: name #</span></span>
         </script>
     </body>
 </html>

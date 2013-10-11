@@ -9,7 +9,26 @@ body, html {
     text-align: center;
 }
 
+#capture-wrapper{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
 #capture-btn{
-    margin: 3em 0;
-    font-size: 2em;
+    margin: auto;
+    font-size: 3.5em;
+}
+
+#pictures-listview{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.picture{
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }

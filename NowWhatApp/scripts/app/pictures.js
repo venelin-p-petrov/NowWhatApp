@@ -6,7 +6,7 @@ var appPictureDirectory = appPictureDirectory || {};
         var directoryReader = appPictureDirectory.createReader();
         directoryReader.readEntries(function(entries) {
             viewModel.pictures.splice(0, viewModel.pictures.length);
-            var picCount = 20;
+            var picCount = 10;
             var i;
             for (i=entries.length - 1; i >= entries.length - picCount && i >= 0; i--) {
                 if (entries[i].isFile) {

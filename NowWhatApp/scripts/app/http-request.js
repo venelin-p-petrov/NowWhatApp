@@ -6,7 +6,7 @@ window.httpRequest = (function(){
                 type:"GET",
                 dataType:"json",
                 contentType:"application/json",
-                timeout:5000,
+                timeout:3000,
                 success:function(data){
                     resolve(data);
                 },

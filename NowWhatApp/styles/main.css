@@ -32,3 +32,18 @@ body, html {
     margin: 0;
     padding: 0;
 }
+
+.picture-single{
+    max-width: 90%;
+    max-height: 60%;
+    margin: 0;
+    padding: 0;
+}
+
+#post-wrapper{
+    text-align: center;
+}
+/*
+#places-list{
+    width: 320px;
+}*/

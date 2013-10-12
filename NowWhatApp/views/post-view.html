@@ -1,6 +1,14 @@
 <div data-role="view" id="post-view" data-id="post-view"
      data-layout="main-layout" data-title="Post"
-    data-show="app.post.init">
+     data-show="app.post.init">
 
-    <div data-bind="html: picture"></div>
+    <div id="post-wrapper">
+        <div id="picture-wrapper" data-bind="html: picture"></div>
+        <h4>Where are you?</h4>
+        <input id="places-list" data-role="dropdownlist"
+               data-bind="source: places, events: { change: changePlace}" data-text-field="name" style="width: 80%;" />
+        <textarea id="post-text" style="resize: none; width: 80%; display: inline-block" data-bind="text: message"></textarea>
+        <br/>
+        <button data-role="button" data-bind="events: {click: sharePost}">Post</button>
+    </div>
 </div>
